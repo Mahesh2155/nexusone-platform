@@ -1,6 +1,6 @@
 # NexusOne Platform
 
-Enterprise Multi-Tenant SaaS Platform for SMEs
+Enterprise Multi-Tenant SaaS Platform for SMEs.
 
 ## Tech Stack
 
