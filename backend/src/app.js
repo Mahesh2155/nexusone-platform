@@ -2,6 +2,8 @@ const express = require("express");
 const cors = require("cors");
 const helmet = require("helmet");
 const authRoutes = require("./routes/authRoutes");
+const tenantRoutes = require("./routes/tenantRoutes");
+const onboardingRoutes = require("./routes/onboardingRoutes");
 
 const app = express();
 
@@ -14,6 +16,8 @@ app.use(
     authRoutes
 );
 
+app.use("/api/tenants", tenantRoutes);
+app.use("/api/onboarding", onboardingRoutes);
 
 app.get("/", (req, res) => {
     res.json({
