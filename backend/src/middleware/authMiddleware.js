@@ -1,5 +1,5 @@
 const { verifyToken } = require("../utils/jwt");
-const ROLE_PERMISSIONS = require("../constants/rolePermissions");
+// const ROLE_PERMISSIONS = require("../constants/rolePermissions");
 
 const protect = (req, res, next) => {
   try {
@@ -16,10 +16,12 @@ const protect = (req, res, next) => {
 
     const decoded = verifyToken(token, process.env.JWT_SECRET);
 
-    req.user = {
-      ...decoded,
-      permissions: ROLE_PERMISSIONS[decoded.role] || [],
-    };
+    // req.user = {
+    //   ...decoded,
+    //   permissions: ROLE_PERMISSIONS[decoded.role] || [],
+    // };
+    req.user = decoded;
+    // console.log("RBAC USER:", req.user);
 
     next();
   } catch (error) {

@@ -1,3 +1,5 @@
+const ROLE_PERMISSIONS = require("../constants/rolePermissions");
+
 const allowPermissions = (...permissions) => {
 
     return (req, res, next) => {
@@ -10,7 +12,8 @@ const allowPermissions = (...permissions) => {
         }
 
 
-        const userPermissions = req.user.permissions || [];
+        // const userPermissions = req.user.permissions || [];
+        const userPermissions = ROLE_PERMISSIONS[req.user.role] || [];
 
 
         const hasPermission = permissions.some(

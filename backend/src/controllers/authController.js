@@ -44,7 +44,8 @@ const login = async (req, res) => {
     }
 
     const isMatch = await comparePassword(password, user.password);
-    const accessToken = generateAccessToken(user._id);
+    // const accessToken = generateAccessToken(user._id);
+    const accessToken = generateAccessToken(user);
 
     const refreshToken = generateRefreshToken(user._id);
 
