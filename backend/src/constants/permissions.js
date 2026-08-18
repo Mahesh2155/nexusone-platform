@@ -6,6 +6,11 @@ const PERMISSIONS = {
     USER_VIEW: "user.view",
     USER_UPDATE: "user.update",
 
+    CUSTOMER_CREATE: "customer.create",
+    CUSTOMER_VIEW: "customer.view",
+    CUSTOMER_UPDATE: "customer.update",
+    CUSTOMER_DELETE: "customer.delete",
+
     PROFILE_VIEW: "profile.view",
     PROFILE_UPDATE: "profile.update"
 };
