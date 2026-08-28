@@ -7,6 +7,7 @@ const onboardingRoutes = require("./routes/onboardingRoutes");
 const rbacTestRoutes = require("./routes/rbacTestRoutes");
 const userRoutes = require("./routes/userRoutes");
 const customerRoutes = require("./routes/customerRoutes");
+const leadRoutes = require("./routes/leadRoutes");
 
 const app = express();
 
@@ -24,6 +25,7 @@ app.use("/api/onboarding", onboardingRoutes);
 app.use("/api/rbac-test", rbacTestRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/customers", customerRoutes);
+app.use("/api/leads", leadRoutes);
 
 app.get("/", (req, res) => {
     res.json({

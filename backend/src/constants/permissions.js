@@ -12,7 +12,14 @@ const PERMISSIONS = {
     CUSTOMER_DELETE: "customer.delete",
 
     PROFILE_VIEW: "profile.view",
-    PROFILE_UPDATE: "profile.update"
+    PROFILE_UPDATE: "profile.update",
+
+    LEAD_CREATE: "lead.create",
+    LEAD_VIEW: "lead.view",
+    LEAD_UPDATE: "lead.update",
+    LEAD_DELETE: "lead.delete",
+    LEAD_ASSIGN: "lead.assign",
+    LEAD_CONVERT: "lead.convert"
 };
 
 module.exports = PERMISSIONS;
